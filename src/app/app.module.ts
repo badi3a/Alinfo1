@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ListProductComponent } from './list-product/list-product.component';
 import {FormsModule} from "@angular/forms";
+import { FormProductComponent } from './form-product/form-product.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListProductComponent
+    ListProductComponent,
+    FormProductComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
