@@ -36,5 +36,22 @@ export class ListProductComponent implements OnInit {
       }
     ];
   }
-
+  incrementLike(product:Product):void{
+    let i = this.list.indexOf(product);
+    if(i!=-1){
+      this.list[i].like++;
+    }
+  }
+  buyProduct(product: Product): void{
+    let i = this.list.indexOf(product);
+    if(i!=-1){
+      this.list[i].quantity--;
+    }
+  }
+  delete(product: Product):void{
+    let i = this.list.indexOf(product);
+    if(i!=-1){
+      this.list.splice(i,1)
+    }
+  }
 }
