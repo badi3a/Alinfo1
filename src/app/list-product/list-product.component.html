@@ -1,4 +1,11 @@
 <h1>Product List: {{title}}</h1>
+<form>
+  <div class="form-group  col-md-3">
+    <label>Search by Price</label>
+    <input type="text" name="input" [(ngModel)]="priceMax" class="form-control">
+  </div>
+</form>
+
 <table class="table">
   <thead>
   <tr>
@@ -10,8 +17,8 @@
     <th>action</th>
   </tr>
   </thead>
-  <tbody>
-  <tr *ngFor="let product of list">
+  <tbody  *ngFor="let product of list">
+  <tr *ngIf="product.price<priceMax || priceMax==null">
     <td><img src="{{product.picture}}"></td>
     <td>{{product.title}}</td>
     <td>{{product.price}}</td>
