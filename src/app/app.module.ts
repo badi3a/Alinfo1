@@ -8,6 +8,7 @@ import { ListProductComponent } from './list-product/list-product.component';
 import {FormsModule} from "@angular/forms";
 import { FormProductComponent } from './form-product/form-product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {ProductService} from "./services/product.service";
 
 @NgModule({
   declarations: [
